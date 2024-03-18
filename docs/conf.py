@@ -30,7 +30,7 @@ project = "demandlib"
 year = "2016-2021"
 author = "oemof developer group"
 copyright = "{0}, {1}".format(year, author)
-version = release = "0.1.9"
+version = release = "0.1.10"
 
 pygments_style = "trac"
 templates_path = ["."]
@@ -57,4 +57,7 @@ napoleon_use_rtype = False
 napoleon_use_param = False
 nitpicky = False
 
-linkcheck_ignore = [r"https://requires.io/.*"]
+linkcheck_ignore = [
+    r"https://requires.io/.*",
+    r"https://www.avacon-netz.de/.*",
+]

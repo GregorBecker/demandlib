@@ -1,7 +1,7 @@
 Changelog
 =========
 
-v0.1.9 (2021-?-?)
+v0.1.10 (?-?-?)
 +++++++++++++++++++++++++
 
 New features
@@ -10,11 +10,17 @@ New features
 
 Bug fixes
 #########
-*
+*   
 
 Other changes
 #############
-*
+*   Adhere to packaging standards
+
+
+v0.1.9 (2023-03-18)
++++++++++++++++++++++++++
+
+*   Calculation of BDEW profiles was improved
 
 
 
