@@ -147,6 +147,12 @@ class ElecSlp:
                 + pd.to_timedelta(merged_df["minute"], unit="m")
             )
             merged_df.sort_index(inplace=True)
+            
+            # Fix future warnings
+            int_columns = new_df.select_dtypes(include='int64').columns
+            new_df[int_columns] = new_df[int_columns].astype(float)
+            int_columns = new_df.select_dtypes(include='int32').columns
+            new_df[int_columns] = new_df[int_columns].astype(int)
 
             new_df.update(merged_df)
 

@@ -99,8 +99,8 @@ class HeatBuilding:
             .resample("D")
             .mean()
             .reindex(self.df.index)
-            .fillna(method="ffill")
-            .fillna(method="bfill")
+            .ffill()
+            .bfill()
         )
 
         if how == "geometric_series":
@@ -268,11 +268,11 @@ class HeatBuilding:
             + "wind_impact=={0}".format(self.wind_class)
         )
 
-        a = float(sigmoid["parameter_a"])
-        b = float(sigmoid["parameter_b"])
-        c = float(sigmoid["parameter_c"])
+        a = float(sigmoid["parameter_a"].iloc[0])
+        b = float(sigmoid["parameter_b"].iloc[0])
+        c = float(sigmoid["parameter_c"].iloc[0])
         if self.ww_incl:
-            d = float(sigmoid["parameter_d"])
+            d = float(sigmoid["parameter_d"].iloc[0])
         else:
             d = 0
         return a, b, c, d
